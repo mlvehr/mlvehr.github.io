@@ -5,11 +5,11 @@
 }
 
 .card-face.cake:not(.step-0,.step-1,.step-2) {
-  background: #e05b7b;
+  /*background: #e05b7b;*/
 }
 
 .cake-wrapper {
-  display: flex;
+  display: none;
   justify-content: center;
 }
 

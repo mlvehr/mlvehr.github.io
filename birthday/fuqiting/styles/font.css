@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Hollow";
+  src: url("../assets/fonts/hollow/hollow.eot"); /* IE9 */
+  src: url("../assets/fonts/hollow/hollow.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+
+  url("../assets/fonts/hollow/hollow.woff") format("woff"), /* chrome、firefox */
+  url("../assets/fonts/hollow/hollow.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+
+  url("../assets/fonts/hollow/hollow.svg#Hollow") format("svg"); /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: "Calligraphy";
+  src: url("../assets/fonts/calligraphy/calligraphy.eot"); /* IE9 */
+  src: url("../assets/fonts/calligraphy/calligraphy.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+
+  url("../assets/fonts/calligraphy/calligraphy.woff") format("woff"), /* chrome、firefox */
+  url("../assets/fonts/calligraphy/calligraphy.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+
+  url("../assets/fonts/calligraphy/calligraphy.svg#Calligraphy") format("svg"); /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Happy";
+  src: url("../assets/fonts/happy/happy.eot"); /* IE9 */
+  src: url("../assets/fonts/happy/happy.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+
+  url("../assets/fonts/happy/happy.woff") format("woff"), /* chrome、firefox */
+  url("../assets/fonts/happy/happy.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+
+  url("../assets/fonts/happy/happy.svg#happy") format("svg"); /* iOS 4.1- */
+  font-style: normal;
+  font-weight: normal;
+}

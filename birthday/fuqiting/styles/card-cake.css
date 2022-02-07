@@ -5,11 +5,11 @@
 }
 
 .card-face.cake:not(.step-0,.step-1,.step-2) {
-  background: #e05b7b;
+  /*background: #e05b7b;*/
 }
 
 .cake-wrapper {
-  display: flex;
+  display: none;
   justify-content: center;
 }
 
@@ -30,6 +30,8 @@
   background: #fff;
   border-radius: 10px;
   transform: translateX(-50%);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   animation: in 500ms 6s ease-out forwards;
   z-index: 2;

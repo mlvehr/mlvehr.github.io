@@ -87,6 +87,8 @@ body > canvas {
   border-radius: inherit;
 
   box-sizing: border-box;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 

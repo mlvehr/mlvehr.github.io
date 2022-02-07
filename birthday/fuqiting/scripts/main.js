@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let step = window.innerWidth < 500 ? 1 : 0;
   let running = false;
   let playing = false;
-  let music = new Audio('assets/music/happy-birthday.mp3');
-  music.loop = true;
+  let music;
+  toggle();
 
   function toggle(value) {
     if (value == null) {
@@ -97,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
        * 2. 添加并显示蛋糕 🍰
        */
       case 3: {
+        cakeWrapper.style.backgroundColor = '#e05b7b';
         giftBox.style.display = 'none';
         cake.src = 'assets/images/cake.svg';
         cake.addEventListener('load', () => {
@@ -141,8 +142,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     step = value;
-    if(!cakeContainer.classList.replace(`step-${step - 1}`, `step-${step}`)){
-      cakeContainer.classList.add(`step-${step}`)
+    if (!cakeContainer.classList.replace(`step-${step - 1}`, `step-${step}`)) {
+      cakeContainer.classList.add(`step-${step}`);
     }
     return step;
   }
@@ -182,6 +183,8 @@ document.addEventListener('DOMContentLoaded', () => {
       openPresent(step + 1);
     }
   });
-  toggle();
+
+  music = new Audio('assets/music/happy-birthday.mp3');
+  music.loop = true;
 }, {once: true});
 

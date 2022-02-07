@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let step = window.innerWidth < 500 ? 1 : 0;
   let running = false;
   let playing = false;
-  let music = new Audio('../assets/music/happy-birthday.mp3');
+  let music = new Audio('assets/music/happy-birthday.mp3');
   music.loop = true;
 
   function toggle(value) {

@@ -30,6 +30,8 @@
   background: #fff;
   border-radius: 10px;
   transform: translateX(-50%);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   animation: in 500ms 6s ease-out forwards;
   z-index: 2;

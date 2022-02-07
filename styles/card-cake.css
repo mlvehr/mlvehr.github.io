@@ -1,0 +1,188 @@
+/* [卡片] 蛋糕 */
+.card-face.cake {
+  overflow: hidden;
+  transition: background-color 1s ease-out;
+}
+
+.card-face.cake:not(.step-0,.step-1,.step-2) {
+  background: #e05b7b;
+}
+
+.cake-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.cake-wrapper .cake-image {
+  transform: translateY(-60%);
+  width: 50%;
+}
+
+/* ============================================== 蜡烛 🕯️ */
+
+.candle {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: .6vw;
+  height: 6vw;
+  min-width: 5px;
+  background: #fff;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  backface-visibility: hidden;
+  animation: in 500ms 6s ease-out forwards;
+  z-index: 2;
+}
+
+.candle:after,
+.candle:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.22222222px;
+}
+
+.candle:after {
+  top: 25%;
+  left: 0;
+}
+
+.candle:before {
+  top: 45%;
+  left: 0;
+}
+
+/* ============================================== 火 🔥 */
+.cake-wrapper.blow .fire {
+  opacity: 0;
+}
+
+.fire {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.2px;
+  width: 8px;
+  height: 18px;
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.fire:nth-child(1) {
+  -webkit-animation: fire 2s 6.5s infinite;
+  animation: fire 2s 6.5s infinite;
+}
+
+.fire:nth-child(2) {
+  -webkit-animation: fire 1.5s 6.5s infinite;
+  animation: fire 1.5s 6.5s infinite;
+}
+
+.fire:nth-child(3) {
+  -webkit-animation: fire 1s 6.5s infinite;
+  animation: fire 1s 6.5s infinite;
+}
+
+.fire:nth-child(4) {
+  -webkit-animation: fire 0.5s 6.5s infinite;
+  animation: fire 0.5s 6.5s infinite;
+}
+
+.fire:nth-child(5) {
+  -webkit-animation: fire 0.2s 6.5s infinite;
+  animation: fire 0.2s 6.5s infinite;
+}
+
+/* ============================================== [动画] 火 🔥 */
+
+@keyframes fire {
+  0%, 100% {
+    background: rgba(254, 248, 97, 0.5);
+    -webkit-box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    -webkit-box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    -webkit-transform: translateY(-20px) scale(0);
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+@keyframes in {
+  to {
+    bottom: 60%;
+  }
+}
+
+/* ============================================== 按钮 🔘 */
+
+.cake-operate {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  transition: all .4s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.cake-operate:hover {
+  background-position: 100% 0;
+  transition: all .4s ease-in-out;
+}
+
+.cake-operate:focus {
+  outline: none;
+}
+
+.cake-operate {
+  background-image: linear-gradient(
+      to right,
+      #ed6ea0,
+      #ec8c69,
+      #f7186a,
+      #fbb03b
+  );
+  box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+.gift-box-wrapper {
+  position: relative;
+  width: 50%;
+  padding-bottom: 35%;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-52%);
+}
+
+.step-6 .cake-blessing {
+  display: block;
+}
+
+.cake-blessing {
+  display: none;
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  text-align: center;
+  font-size: 4vw;
+  background: -webkit-linear-gradient(0deg, #e05b7b, #3c5374 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 1vw #ba5990;
+  font-family: Happy, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}

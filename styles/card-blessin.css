@@ -1,0 +1,40 @@
+/* [卡片] 祝福语 */
+.card-face.blessing {
+  padding: 4vw 5vw;
+  background: #e0f8ff radial-gradient(circle at 0, #e0f8ff, #eee0fb);
+  transform: rotateY(180deg);
+}
+
+.card-face.blessing .party-popper {
+  position: absolute;
+  bottom: 2vw;
+  right: 2vw;
+  height: 25vw;
+  fill: rgba(0, 199, 228, 0.5);
+  -webkit-filter: drop-shadow(0 0 1vw rgba(0, 199, 228, 1));
+  filter: drop-shadow(0 0 1vw rgba(0, 199, 228, 1));
+  transform: translateZ(2vw);
+}
+
+.card-face.blessing .text {
+  text-shadow: 0 0 1vw rgba(0, 199, 228, 1);
+  background: -webkit-linear-gradient(0deg, rgb(0, 199, 228), rgb(165, 104, 246) 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-face.blessing h1 {
+  margin: 0;
+  font-size: 6vw;
+  font-weight: normal;
+  font-family: "Hollow", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  transform: translateZ(5vw);
+}
+
+.card-face.blessing p {
+  margin-top: 4.5vw;
+  font-size: 2.5vw;
+  font-style: italic;
+  font-family: "Calligraphy", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  transform: translateZ(4vw);
+}

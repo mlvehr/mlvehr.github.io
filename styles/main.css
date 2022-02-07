@@ -1,0 +1,121 @@
+@import "font.css";
+@import "gift-box.css";
+@import "card-cake.css";
+@import "card-blessin.css";
+
+html {
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  background: #dcdcdc radial-gradient(#fff, #ddd);
+  user-select: none;
+}
+
+canvas#container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    transform: scale(1.5);
+  }
+
+  .cake-operate {
+    display: none !important;
+  }
+
+  .gift-box-wrapper {
+    padding-bottom: 30% !important;
+    transform: translateY(0) !important;
+  }
+}
+
+body > canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  z-index: 11;
+  transition: transform 0.5s;
+}
+
+.content .greeting-card {
+  border-radius: 0.8vw;
+  transform-style: preserve-3d;
+  transform: perspective(800px);
+  transition: transform 0.1s ease-out;
+}
+
+/* [卡片] */
+.card {
+  width: 51vw;
+  height: 33vw;
+  border-radius: inherit;
+  box-sizing: border-box;
+  box-shadow: 0 1vw 1.5vw rgba(0, 0, 0, .2);
+  transition: transform 3s;
+  transform-style: preserve-3d;
+}
+
+.card.reversal {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+
+.card-face .arrows {
+  position: absolute;
+  bottom: 10px;
+  display: none;
+  width: 36px;
+  height: 36px;
+  opacity: .1;
+  cursor: pointer;
+  transition: opacity 1s ease-in-out;
+  z-index: 12;
+}
+
+.card-face .arrows:hover {
+  opacity: .8;
+}
+
+.js-tilt-glare {
+  border-radius: inherit;
+}
+
+.card-face.cake .arrows {
+  right: 10px;
+  transform: rotate(45deg);
+}
+
+.card-face.blessing .arrows {
+  left: 10px;
+  transform: rotate(-135deg);
+}
